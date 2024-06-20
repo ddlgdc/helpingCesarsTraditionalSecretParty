@@ -1,0 +1,30 @@
+Breakdown of issues I had along with complications, workarounds etc. 
+
+getRandomLetter() function: 
+this function's purpose is to generate a random lowercase letter from the alphabet
+it is done by using math operators to create random index within the length of 
+alphabet
+
+encrypt(message, shiftValue): 
+this function encrypts a mesage using ceasars technique, it adds random letters as 
+instructed after every two letters 
+it iterates through each character of 'message', calculates the new position using 
+'shiftValue', handles non-alphabet character, and inserts random letters every two 
+letters 
+
+decrypt(encryptedMessage, shiftValue):
+decrypts a message that was encrypted with cesars technique skipping every 3 characters 
+cleans the encryptedMessage by skippig every 3rd character, it normalizes shiftValue and 
+reverses the encryption process to retrieve the original message, it also handles both 
+upper and lower case characters
+
+complications:
+both of the functions needs to correctly handle characters that are not part of the 
+alphabet. they have to be included as in the output 
+
+the shiftvalue range has to be within 25 due to the length of alphabet. this is for proper 
+wrapping around the alphabet during the process
+
+case sensitivity was an issue, this is why a capatlized alphabet was introduced. i had to 
+create work around in case a letter was upper case to ensure proper decryption. 
+
